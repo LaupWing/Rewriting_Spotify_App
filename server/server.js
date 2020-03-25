@@ -5,7 +5,7 @@ const routes = require('./routes/routeHandler')
 const path = require('path')
 
 app
-    .use('view engine', 'ejs')
-    .set('views', path.join(__dirname,'view'))
+    .set('view engine', 'ejs')
+    .set('views', path.join(__dirname,'views'))
     .use(routes)
     .listen(process.env.PORT, ()=> console.log(`Server is listening to port ${process.env.PORT}`))

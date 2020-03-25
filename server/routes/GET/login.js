@@ -1,3 +1,6 @@
+const config = require('../config')
 module.exports = (req,res)=>{
-    res.send('login')
+    res.render(config.template, {
+        page: 'login'
+    })
 }
