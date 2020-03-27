@@ -1,5 +1,9 @@
 const config = require('../config')
-module.exports = (req,res)=>{
+const spotify = require('../../api/spotify')
+
+module.exports = async (req, res) => {
     console.log(req.session.acces_token)
+    const categories = await spotify.getCategories(req.session.acces_token)
+    console.log(categories)
     res.send('home')
 }
