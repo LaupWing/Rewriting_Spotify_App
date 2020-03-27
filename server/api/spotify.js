@@ -1,13 +1,12 @@
 const fetching = require('./fetch')
 
 module.exports = class {
-    static async getCategories(accec_token) {
+    static async getCategories(acces_token) {
         const settings = {
-            endpoint: 'browse/categories',
-            accec_token
+            endpoint: 'browse/categories?offset=0&limit=50',
+            acces_token
         }
         const categories = await fetching(settings)
-        console.log(categories)
         return categories
     }
 }
