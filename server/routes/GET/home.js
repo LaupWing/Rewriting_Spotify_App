@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
     const categories = await spotify.getCategories(req.session.acces_token)
     const me = await spotify.getUserInfo(req.session.acces_token)
     let user = await User.findOne({ spotify_id: me.id })
-
+    console.log(categories.categories.items[0])
     if (!user) {
         user = new User({
             name: me.display_name,
@@ -14,8 +14,10 @@ module.exports = async (req, res) => {
             spotify_id: me.id
         })
         await user.save()
-        console.log(user)
     }
 
-    res.send('home')
+    res.render(config.template, {
+        page: 'home',
+        categories: categories.categories.items
+    })
 }
