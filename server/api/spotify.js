@@ -9,4 +9,12 @@ module.exports = class {
         const categories = await fetching(settings)
         return categories
     }
+    static async getUserInfo(acces_token) {
+        const settings = {
+            endpoint: 'me',
+            acces_token
+        }
+        const me = await fetching(settings)
+        return me
+    }
 }
