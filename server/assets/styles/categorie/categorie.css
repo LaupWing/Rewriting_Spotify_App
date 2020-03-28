@@ -1,0 +1,12 @@
+#categories img{
+    width: 200px;
+    margin: 5px;
+}
+
+#categories .categorie{
+    transition: .5s all;
+    border-radius: 5px;
+}
+#categories .categorie:hover{
+    border: solid var(--highlight-color) 3px;
+}

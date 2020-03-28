@@ -1,5 +1,27 @@
+@import "./1.colors/colors.css";
+@import "./2.sizes/sizes.css";
+@import "./categorie/categorie.css";
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    background: var(--main-color);
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    max-width: 800px;
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
 }
