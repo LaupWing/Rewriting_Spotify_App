@@ -15,11 +15,13 @@ nav li{
     align-items: center;
     flex-direction: column;
     overflow: hidden;
+    font-size: .8rem;
 }
 nav li p{
     margin-top: 5px;
     transform: translateY(100%);
     transition: .5s;
+    padding-bottom: 5px;
 }
 nav li:hover{
     color: var(--highlight-color);
@@ -32,7 +34,7 @@ nav li:hover p{
 }
 nav li.active{
     color: var(--highlight-color);
-    border-bottom: var(--highlight-color) solid 2px;
+    border-bottom: var(--highlight-color) solid 1px;
 }
 nav li.active p{
     transform: translateY(0);
@@ -41,7 +43,7 @@ nav li.active svg path{
     fill: var(--highlight-color);
 }
 nav li svg{
-    height: 50px;
+    height: 40px;
 }
 nav li svg path{
     fill: var(--secundair-color);
