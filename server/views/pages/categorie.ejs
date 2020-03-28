@@ -1,1 +1,5 @@
-<h2>Categorie</h2>
+<div class="container">
+    <% playlists.forEach(list=>{ %>
+    <%- include('./categorie/list', {list}) %>
+    <% }) %>
+</div>

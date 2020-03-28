@@ -2,6 +2,7 @@
 @import "./2.sizes/sizes.css";
 @import "./3.elements/elements.css";
 @import "./categorie/categorie.css";
+@import "./playlists/playlists.css";
 @import "./nav/nav.css";
 
 *{
@@ -29,4 +30,11 @@ main{
     flex-direction: column;
     justify-content: center;
     margin: var(--base-margin);
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
