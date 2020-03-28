@@ -5,11 +5,11 @@ const auth = require('../middleware/auth')
 // GET
 const login_get = require('./GET/login')
 const home_get = require('./GET/home')
-const rooms_get = require('./GET/rooms')
+const categorie_get = require('./GET/categorie')
 
 router
-    .get('/',auth, home_get)
-    .get('/rooms',auth, rooms_get)
+    .get('/', auth, home_get)
     .get('/login', login_get)
+    .get('/categorie/:id', auth, categorie_get)
 
 module.exports = router

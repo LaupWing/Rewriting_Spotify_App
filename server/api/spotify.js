@@ -9,6 +9,14 @@ module.exports = class {
         const categories = await fetching(settings)
         return categories
     }
+    static async getCategorie(acces_token, category_id) {
+        const settings = {
+            endpoint: `browse/categories/${category_id}/playlists`,
+            acces_token
+        }
+        const categorie = await fetching(settings)
+        return categorie
+    }
     static async getUserInfo(acces_token) {
         const settings = {
             endpoint: 'me',
