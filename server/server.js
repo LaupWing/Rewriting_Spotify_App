@@ -9,13 +9,14 @@ const session = require('express-session')
 
 app
     .set('view engine', 'ejs')
-    .set('views', path.join(__dirname,'views'))
+    .set('views', path.join(__dirname, 'views'))
+    .use('/static', express.static(path.join(__dirname, 'assets')))
     .use(session({
         secret: "Spotify",
-        cookie: {secure: false},
+        cookie: { secure: false },
         resave: false,
         saveUninitialized: true
     }))
     .use(routes)
     .use(oauth)
-    .listen(process.env.PORT, ()=> console.log(`Server is listening to port ${process.env.PORT}`))
+    .listen(process.env.PORT, () => console.log(`Server is listening to port ${process.env.PORT}`))
