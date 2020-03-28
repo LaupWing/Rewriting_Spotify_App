@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 require('dotenv').config()
+require('./database/db')
 const routes = require('./routes/routeHandler')
 const oauth = require('./routes/oauth/oauth')
 const path = require('path')
