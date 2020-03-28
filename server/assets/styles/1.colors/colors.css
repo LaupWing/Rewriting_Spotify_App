@@ -2,4 +2,5 @@
     --main-color: black;
     --secundair-color: orange;
     --highlight-color: yellow;
+    --lighter-black: rgba(0,0,0,0.9);
 }

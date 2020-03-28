@@ -1,11 +1,13 @@
 @import "./1.colors/colors.css";
 @import "./2.sizes/sizes.css";
 @import "./categorie/categorie.css";
+@import "./elements/elements.css";
 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body{
@@ -23,5 +25,5 @@ main{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 20px;
+    margin: var(--base-margin);
 }
