@@ -10,7 +10,10 @@
 </head>
 
 <body>
-    <%- include('../pages/'+page) %>
+    <main id="<%= mainId %>">
+        <%- include('../partials/nav') %>
+        <%- include('../pages/'+page) %>
+    </main>
 </body>
 
 </html>

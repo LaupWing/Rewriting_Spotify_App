@@ -1,3 +1,10 @@
+.categorie-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
 #categories img{
     width: 200px;
     margin: 5px;
