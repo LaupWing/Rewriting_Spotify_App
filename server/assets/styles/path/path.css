@@ -1,0 +1,9 @@
+#path{
+    width: 80%;
+    color: var(--secundair-color);
+    margin: var(--base-margin) 0;
+    font-size: .8rem;
+}
+#path a:hover{
+    color: var(--highlight-color);
+}

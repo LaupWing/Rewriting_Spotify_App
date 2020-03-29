@@ -3,7 +3,6 @@ nav{
     justify-content: space-around;
     width: 50%;
     margin: var(--base-margin);
-    margin-bottom: 60px;
 }
 
 nav li{

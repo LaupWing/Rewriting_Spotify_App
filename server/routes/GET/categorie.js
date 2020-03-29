@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
 
     res.render(config.template, {
         page: 'playlists',
-        playlists: categorie.playlists.items,
+        playlists: 'items' in categorie.playlists ? categorie.playlists.items : [],
         mainId: 'categorie',
         activeLink: 'categories'
     })

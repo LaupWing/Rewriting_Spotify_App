@@ -4,6 +4,7 @@
 @import "./categorie/categorie.css";
 @import "./playlists/playlists.css";
 @import "./nav/nav.css";
+@import "./path/path.css";
 
 *{
     box-sizing: border-box;

@@ -41,7 +41,7 @@ router
         }
         request.post(authOptions, function (error, response, body) {
             const access_token = body.access_token
-            const uri = process.env.FRONTEND_URI || 'http://localhost:8888/categories'
+            const uri = process.env.FRONTEND_URI || 'http://localhost:8888/categorie'
             req.session.acces_token = access_token
             res.redirect(uri)
         })
