@@ -4,11 +4,11 @@ const auth = require('../middleware/auth')
 
 // GET
 const login_get = require('./GET/login')
-const home_get = require('./GET/home')
+const categories_get = require('./GET/categories')
 const categorie_get = require('./GET/categorie')
 
 router
-    .get('/', auth, home_get)
+    .get('/categorie', auth, categories_get)
     .get('/login', login_get)
     .get('/categorie/:id', auth, categorie_get)
 

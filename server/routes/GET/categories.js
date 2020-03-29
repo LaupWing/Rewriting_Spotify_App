@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
     }
 
     res.render(config.template, {
-        page: 'home',
+        page: 'categories',
         categories: categories.categories.items,
         user,
         mainId: 'categories',
