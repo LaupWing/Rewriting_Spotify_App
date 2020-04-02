@@ -5,7 +5,7 @@ nav{
     margin: var(--base-margin);
 }
 
-nav li{
+nav a{
     color: var(--secundair-color);
     cursor: pointer;
     transition: .5s;
@@ -16,34 +16,34 @@ nav li{
     overflow: hidden;
     font-size: .8rem;
 }
-nav li p{
+nav a p{
     margin-top: 5px;
     transform: translateY(100%);
     transition: .5s;
     padding-bottom: 5px;
 }
-nav li:hover{
+nav a:hover{
     color: var(--highlight-color);
 }
-nav li:hover svg path{
+nav a:hover svg path{
     fill: var(--highlight-color);
 }
-nav li:hover p{
+nav a:hover p{
     transform: translateY(0);
 }
-nav li.active{
+nav a.active{
     color: var(--highlight-color);
-    border-bottom: var(--highlight-color) solid 1px;
+    border-bottom: var(--highlight-color) soad 1px;
 }
-nav li.active p{
+nav a.active p{
     transform: translateY(0);
 }
-nav li.active svg path{
+nav a.active svg path{
     fill: var(--highlight-color);
 }
-nav li svg{
+nav a svg{
     height: 40px;
 }
-nav li svg path{
+nav a svg path{
     fill: var(--secundair-color);
 }
