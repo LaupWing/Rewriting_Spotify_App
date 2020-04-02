@@ -26,6 +26,11 @@ userSchema.virtual('records', {
     localField: '_id',
     foreignField: 'owner'
 })
+userSchema.virtual('likesAndFavorites', {
+    ref: 'LikesAndFavorites',
+    localField: '_id',
+    foreignField: 'owner'
+})
 
 
 const User = mongoose.model('User', userSchema)
