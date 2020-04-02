@@ -2,21 +2,37 @@
     margin: 5px;
     position: relative;
 }
-.playlist .likes{
+.playlist .likes,
+.playlist .favorite{
     position: absolute;
     z-index: 1000;
-    bottom:0;
-    left: 0;
     padding: 8px;
+    bottom:0;
     background: var(--lighter-black);
+    cursor: pointer;
+}
+.playlist .likes{
+    left: 0;
+}
+.playlist .favorite{
+    right: 0;
 }
 
-.playlist .likes svg{
+.playlist .likes svg,
+.playlist .favorite svg{
     width: 30px;
 }
-.playlist .likes svg path{
+.playlist .likes svg path,
+.playlist .favorite svg path{
+    transition: .25s;
     fill: var(--highlight-color);
 }
-.playlist .likes svg .inner{
+.playlist .likes svg .inner,
+.playlist .favorite svg .inner{
     opacity: 0;
+}
+
+.playlist .likes svg:hover .inner,
+.playlist .favorite svg:hover .inner{
+    opacity: .5;
 }
