@@ -26,8 +26,8 @@ userSchema.virtual('records', {
     localField: '_id',
     foreignField: 'owner'
 })
-userSchema.virtual('likesAndFavorites', {
-    ref: 'LikesAndFavorites',
+userSchema.virtual('favorites', {
+    ref: 'Favorites',
     localField: '_id',
     foreignField: 'owner'
 })

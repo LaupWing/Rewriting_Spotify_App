@@ -1,6 +1,7 @@
 const config = require('../config')
 const spotify = require('../../api/spotify')
 const User = require('../../database/models/User')
+const Favorites = require('../../database/models/Favorites')
 
 module.exports = async (req, res) => {
     const categories = await spotify.getCategories(req.session.acces_token)
@@ -13,13 +14,16 @@ module.exports = async (req, res) => {
             email: me.email,
             spotify_id: me.id
         })
+        const fav = new Favorites({
+            owner: user._id
+        })
+        fav.save()
         await user.save()
     }
 
     res.render(config.template, {
         page: 'categories',
         categories: categories.categories.items,
-        user,
         mainId: 'categories',
         activeLink: 'categories'
     })
