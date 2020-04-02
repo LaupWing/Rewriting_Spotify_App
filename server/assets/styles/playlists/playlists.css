@@ -1,5 +1,6 @@
 .playlist{
-    margin: 5px;
+    margin: 8px 5px;
+    display: flex;
     position: relative;
 }
 .playlist .likes,
@@ -35,4 +36,20 @@
 .playlist .likes svg:hover .inner,
 .playlist .favorite svg:hover .inner{
     opacity: .5;
+}
+
+.playlist .total_songs{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    transform: translateY(-20%);
+    color: var(--main-color);
+    background: var(--highlight-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    font-weight: bold;
 }
