@@ -6,10 +6,12 @@ const auth = require('../middleware/auth')
 const login_get = require('./GET/login')
 const categories_get = require('./GET/categories')
 const categorie_get = require('./GET/categorie')
+const my_list_get = require('./GET/my_list')
 
 router
     .get('/', login_get)
     .get('/categorie', auth, categories_get)
     .get('/categorie/:id', auth, categorie_get)
+    .get('/my_list', auth, my_list_get)
 
 module.exports = router

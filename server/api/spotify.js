@@ -25,4 +25,12 @@ module.exports = class {
         const me = await fetching(settings)
         return me
     }
+    static async getUsersList(acces_token) {
+        const settings = {
+            endpoint: 'me/playlists',
+            acces_token
+        }
+        const my_list = await fetching(settings)
+        return my_list
+    }
 }
