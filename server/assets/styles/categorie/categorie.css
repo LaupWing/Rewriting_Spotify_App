@@ -1,15 +1,15 @@
 #categories img{
     width: 200px;
-    margin: 5px;
 }
 
 #categories .categorie{
     transition: .5s all;
     border-radius: var(--base-border-radius);
     position: relative;
+    border: solid transparent 3px;
 }
 #categories .categorie:hover{
-    border: solid var(--highlight-color) 3px;
+    border-color: var(--highlight-color);
 }
 #categories .categorie:hover .overlay{
     opacity: 1;

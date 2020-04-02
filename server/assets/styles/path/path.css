@@ -4,6 +4,10 @@
     margin: var(--base-margin) 0;
     font-size: .8rem;
 }
+#path a{
+    opacity: .3;
+}
 #path a:hover{
     color: var(--highlight-color);
+    opacity: 1;
 }
