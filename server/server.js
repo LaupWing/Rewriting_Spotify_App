@@ -13,8 +13,11 @@ app
     .use('/static', express.static(path.join(__dirname, 'assets')))
     .use(session({
         secret: "Spotify",
-        cookie: { secure: false },
-        resave: false,
+        cookie: {
+            secure: false,
+            maxAge: 3600000
+        },
+        resave: true,
         saveUninitialized: true
     }))
     .use(routes)

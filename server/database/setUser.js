@@ -24,4 +24,7 @@ module.exports = async (me, req) => {
 
     await user.populate('favorites').execPopulate()
     await user.populate('records').execPopulate()
+    req.session.user = user
+    req.session.favorites = user.favorites
+    req.session.records = user.records
 }
