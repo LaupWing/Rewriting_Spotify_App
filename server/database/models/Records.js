@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 const recordSchema = new mongoose.Schema({
     owner: {
         type: mongoose.Schema.Types.ObjectId,
-        required: true
+        required: true,
+        ref: 'User'
     },
     records: [
         {

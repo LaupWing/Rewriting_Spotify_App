@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 const favoritesSchema = new mongoose.Schema({
     owner: {
         type: mongoose.Schema.Types.ObjectId,
-        required: true
+        required: true,
+        ref: 'User'
     },
     favorites: [
         {

@@ -17,10 +17,12 @@ module.exports = async (req, res) => {
         const fav = new Favorites({
             owner: user._id
         })
-        fav.save()
+        await fav.save()
         await user.save()
     }
 
+    await user.populate('favorites').execPopulate()
+    console.log(user.favorites)
     res.render(config.template, {
         page: 'categories',
         categories: categories.categories.items,
