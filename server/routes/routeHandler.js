@@ -10,8 +10,8 @@ const my_list_get = require('./GET/my_list')
 
 router
     .get('/', login_get)
-    .get('/categorie', auth, categories_get)
-    .get('/categorie/:id', auth, categorie_get)
+    .get('/categories', auth, categories_get)
+    .get('/categories/:id', auth, categorie_get)
     .get('/my_list', auth, my_list_get)
 
 module.exports = router

@@ -2,6 +2,5 @@ const config = require('../config')
 module.exports = (req, res) => {
     res.render(config.template, {
         page: 'login',
-        activeLink: 'login'
     })
 }

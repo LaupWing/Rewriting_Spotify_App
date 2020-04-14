@@ -10,6 +10,5 @@ module.exports = async (req, res) => {
     res.render(config.template, {
         page: 'categories',
         categories: categories.categories.items,
-        activeLink: 'categories'
     })
 }

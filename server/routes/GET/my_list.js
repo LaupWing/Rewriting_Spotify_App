@@ -6,7 +6,6 @@ module.exports = async (req, res) => {
 
     res.render(config.template, {
         page: 'my_list',
-        activeLink: 'my_list',
         my_list: my_list.items.filter(item => item.tracks.total !== 0)
     })
 }
