@@ -1,6 +1,5 @@
 const pathContainer = document.querySelector('#path')
 const paths = window.location.pathname.split('/').filter(p => p !== '')
-console.log(paths, pathContainer)
 
 if (paths.length !== 0) {
     paths.forEach((path, index) => {
