@@ -7,11 +7,12 @@
     <title>Spotify Game</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/styles/main.css">
-    <script src="/static/scripts/main.js" type="module"></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/static/scripts/main.js" type="module" defer></script>
 </head>
 
 <body>
-    <main id="<%= mainId %>">
+    <main id="<%= page %>">
         <%- include('../partials/nav') %>
         <div id="path"></div>
         <%- include('../pages/'+page) %>
